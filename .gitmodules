@@ -1,3 +1,9 @@
 [submodule "plugins"]
 	path = plugins
 	url = https://github.com/getpelican/pelican-plugins
+[submodule "s"]
+	path = s
+	url = https://github.com/hdra/pelican-cait
+[submodule "themes/pelican-cait"]
+	path = themes/pelican-cait
+	url = https://github.com/hdra/pelican-cait
