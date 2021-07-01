@@ -80,7 +80,7 @@ MENUITEMS = (('Blog', INDEX_URL),
 
 # Plugins
 PLUGIN_PATH = 'plugins'
-PLUGINS=['sitemap', 'gzip_cache', 'assets', 'gravatar',]
+# PLUGINS=['sitemap', 'gzip_cache', 'assets', 'gravatar',]
 SITEMAP = {
     'format': 'xml',
     'priorities': {
