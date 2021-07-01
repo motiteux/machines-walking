@@ -17,7 +17,7 @@ PATH = 'content'
 
 DEFAULT_LANG = 'en'
 
-THEME = 'themes/pelican-cait'
+THEME = 'themes/pelican-elegant'
 TYPOGRIFY = True
 
 # url
