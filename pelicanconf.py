@@ -1,20 +1,17 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import os
 
-AUTHOR = 'Marc-O'
-SITENAME = 'Machines walking in the snow'
-SITESUBTITLE = u"My little corner of convergence"
-SITEURL = 'https://motiteux.github.io/machines-walking/'
+AUTHOR = "Elegant Team"
+SITENAME = "Elegant"
+SITESUBTITLE = "The Best Pelican Theme"
+SITEURL = "https://www.machines-walking-in-the-snow.com"
 
-PATH = 'content'
+PATH = "content"
 
 # Regional Settings
-TIMEZONE = 'Europe/Zurich'
-LOCALE = "C"
-DEFAULT_LANG = 'en'
+TIMEZONE = "Asia/Karachi"
 DATE_FORMATS = {"en": "%b %d, %Y"}
 
 # Plugins and extensions
@@ -47,7 +44,7 @@ SITEMAP = {
 }
 
 # Appearance
-THEME = "themes/pelican-elegant"
+THEME = "../"
 TYPOGRIFY = True
 DEFAULT_PAGINATION = False
 
@@ -62,27 +59,26 @@ CATEGORIES_URL = "categories"
 ARCHIVES_URL = "archives"
 SEARCH_URL = "search"
 
+# Feeds
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
+CATEGORY_FEED_ATOM = None
+CATEGORY_FEED_RSS = None
+
 # Social
 SOCIAL = (
-    ("Github", "http://github.com/motiteux/"),
+    ("Github", "https://github.com/Pelican-Elegant/", "Elegant Github Repository"),
     ("RSS", SITEURL + "/feeds/all.atom.xml"),
     (
         "Calendar",
         "https://github.com/Pelican-Elegant/elegant/milestones",
         "Elegant Project Roadmap",
     ),
-    ("twitter", 'https://twitter.com/MarcoTiteux'),
-    ("linkedin", 'https://www.linkedin.com/in/marcoliviertiteux'),
 )
 
 # Elegant theme
-STATIC_PATHS = ["theme/images", "images", "extra/_redirects", "code", 'extra/CNAME', 'extra/favicon.ico', 'extra/robots.txt']
-EXTRA_PATH_METADATA = {
-          "extra/_redirects": {"path": "_redirects"},
-          'extra/CNAME': {'path': 'CNAME'},
-          'extra/favicon.ico': {'path': 'favicon.ico'},
-          'extra/robots.txt': {'path': 'robots.txt'},
-}
+STATIC_PATHS = ["theme/images", "images", "extra/_redirects", "code"]
+EXTRA_PATH_METADATA = {"extra/_redirects": {"path": "_redirects"}}
 
 if os.environ.get("CONTEXT") == "production":
     STATIC_PATHS.append("extra/robots.txt")
@@ -96,9 +92,6 @@ TAG_SAVE_AS = ""
 AUTHOR_SAVE_AS = ""
 CATEGORY_SAVE_AS = ""
 USE_SHORTCUT_ICONS = True
-
-# code blocks with line numbers
-PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 
 # Elegant Labels
 SOCIAL_PROFILE_LABEL = "Stay in Touch"
@@ -114,17 +107,19 @@ SUBSCRIBE_BUTTON_TITLE = "Notify me"
 FREELISTS_NAME = "oracle-l"
 FREELISTS_FILTER = True
 
-GOOGLE_ANALYTICS = 'UA-26850780-1'
+# SMO
+TWITTER_USERNAME = ""
+FEATURED_IMAGE = SITEURL + "/theme/images/apple-touch-icon-152x152.png"
 
 # Legal
 SITE_LICENSE = """Content licensed under <a rel="license nofollow noopener noreferrer"
     href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
     Creative Commons Attribution 4.0 International License</a>."""
-HOSTED_ON = {"name": "Github", "url": "https://www.github.com/"}
+HOSTED_ON = {"name": "Netlify", "url": "https://www.netlify.com/"}
 
 # SEO
 SITE_DESCRIPTION = (
-    "Marc-Olivier Titeux' website, written with Pelican"
+    "Documentation of Elegant, a theme for Pelican, originally created by Talha Mansoor"
 )
 
 # Share links at bottom of articles
@@ -171,31 +166,28 @@ PROJECTS = [
     },
 ]
 
-LANDING_PAGE_TITLE = "Machines walking in the snow – My little corner of convergence"
-
-# PLUGINS=['sitemap', 'gzip_cache', 'assets', 'gravatar',]
-SITEMAP = {
-    'format': 'xml',
-    'priorities': {
-        'articles': 0.5,
-        'indexes': 0.5,
-        'pages': 0.5
-    },
-    'changefreqs': {
-        'articles': 'monthly',
-        'indexes': 'daily',
-        'pages': 'monthly'
-    }
-}
+LANDING_PAGE_TITLE = "Elegant – Why it is the Best Pelican Theme"
 
 AUTHORS = {
-    "Marc-Olivier": {
-        "url": "https://motiteux.github.io/",
-        "blurb": "is the owner of this website.",
-        "avatar": "/images/avatars/motiteux.png",
+    "Talha Mansoor": {
+        "url": "https://www.oncrashreboot.com/",
+        "blurb": "is the creator and lead developer of Elegant theme.",
+        "avatar": "/images/avatars/talha131.png",
+    },
+    "Pablo Iranzo Gómez": {
+        "url": "http://iranzo.github.io",
+        "blurb": " opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc",
+        "avatar": "https://avatars.githubusercontent.com/u/312463",
+    },
+    "Jack De Winter": {
+        "url": "http://jackdewinter.github.io",
+        "blurb": "ever evolving, ever learning",
+    },
+    "Matija Šuklje": {
+        "url": "https://matija.suklje.name",
+        "blurb": "FOSS lawyer by trade, hacker by heart.",
     },
 }
-
 DISQUS_FILTER = True
 UTTERANCES_FILTER = True
 COMMENTBOX_FILTER = True
