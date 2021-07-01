@@ -61,8 +61,6 @@ GITHUB_USERNAME = 'motiteux'
 TWITTER_INTEGRATION_ENABLED = True
 TWITTER_USERNAME = 'MarcoTiteux'
 
-DISQUS_SITENAME = "marcolivier"
-
 GOOGLE_ANALYTICS = 'UA-26850780-1'
 
 STATIC_PATHS = ['images', 'extra/CNAME', 'extra/favicon.ico', 'extra/robots.txt']
@@ -74,15 +72,6 @@ EXTRA_PATH_METADATA = {
 
 # code blocks with line numbers
 PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
-
-USE_CUSTOM_MENU = True
-CUSTOM_MENUITEMS = (('Blog', INDEX_URL),
-                    ('Contact', 'contact'),
-                    ('Projects', page_dir + '/projects'))
-
-MENUITEMS = (('Blog', INDEX_URL),
-             ('Contact', 'contact'),
-             ('Projects', page_dir + '/projects'))
 
 # Plugins
 PLUGIN_PATH = 'plugins'
@@ -99,4 +88,12 @@ SITEMAP = {
         'indexes': 'daily',
         'pages': 'monthly'
     }
+}
+
+AUTHORS = {
+    "Marc-Olivier": {
+        "url": "https://motiteux.github.io/",
+        "blurb": "is the owner of this website.",
+        "avatar": "/images/avatars/motiteux.png",
+    },
 }
