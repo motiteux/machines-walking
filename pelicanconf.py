@@ -5,7 +5,7 @@ AUTHOR = 'Marc-O'
 AUTHOR_EMAIL = 'marcolivier.titeux@gmail.com'
 SITENAME = 'Machines walking in the snow'
 SITESUBTITLE = u"My little corner of convergence"
-SITEURL = 'https://blog.machines-walking-in-the-snow.com/'
+SITEURL = 'https://motiteux.github.io/machines-walking/'
 DESCRIPTION = ''
 ABOUT = u'My little corner'
 
@@ -13,8 +13,7 @@ TIMEZONE = 'Europe/Zurich'
 PDF_GENERATOR = False
 REVERSE_CATEGORY_ORDER = True
 LOCALE = "C"
-OUTPUT_PATH = 'output'
-PATH = 'content/'
+PATH = 'content'
 
 DEFAULT_LANG = 'en'
 
