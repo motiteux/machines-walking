@@ -1,6 +1,6 @@
-[submodule "s"]
-	path = s
-	url = https://github.com/hdra/pelican-cait
 [submodule "themes/pelican-cait"]
 	path = themes/pelican-cait
 	url = https://github.com/hdra/pelican-cait
+[submodule "themes/pelican-elegant"]
+	path = themes/pelican-elegant
+	url = https://github.com/Pelican-Elegant/elegant
