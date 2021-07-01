@@ -44,7 +44,7 @@ SITEMAP = {
 }
 
 # Appearance
-THEME = "../"
+THEME = "themes/pelican-elegant"
 TYPOGRIFY = True
 DEFAULT_PAGINATION = False
 
