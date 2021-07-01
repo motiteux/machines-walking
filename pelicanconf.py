@@ -65,6 +65,13 @@ DISQUS_SITENAME = "marcolivier"
 
 GOOGLE_ANALYTICS = 'UA-26850780-1'
 
+STATIC_PATHS = ['images', 'extra/CNAME', 'extra/favicon.ico', 'extra/robots.txt']
+EXTRA_PATH_METADATA = {
+          'extra/CNAME': {'path': 'CNAME'},
+          'extra/favicon.ico': {'path': 'favicon.ico'},
+          'extra/robots.txt': {'path': 'robots.txt'},
+}
+
 # code blocks with line numbers
 PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 
