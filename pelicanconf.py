@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
+from __future__ import unicode_literals
+import os
+
 AUTHOR = 'Marc-O'
 SITENAME = 'Machines walking in the snow'
 SITESUBTITLE = u"My little corner of convergence"
