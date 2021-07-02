@@ -1,6 +1,6 @@
 Title: Landing
 Heading: Machines waling in the snow
-Template: landing
+Template: index
 URL:
 save_as: index.html
 
