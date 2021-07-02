@@ -14,7 +14,7 @@ jobs:
       env:
         GH_PAGES_BRANCH: publish
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GOOGLE_ANALYTICS: ${{ secrets.GOOGLE_ANALYTICS }}
+        GOOGLE_TAG_MEASUREMENT_ID: ${{ secrets.GOOGLE_ANALYTICS }}
         UTTERANCES_REPO: ${{ secrets.UTTERANCES_REPO }}
         CONTEXT: ${{ secrets.CONTEXT }}
         PELICAN_CONFIG_FILE: publishconf.py
