@@ -21,11 +21,12 @@ I kept having the following issue when using pip freeze with a git repos:
     Could not determine repository location of /home/mtiteux/.virtualenvs/myproject
     
 This drove me quite perplexed as to the reason why I could not correctly parsed `requirements.txt` files and got a when using `pip freeze`:
-    ## !! Could not determine repository location
+
+    Could not determine repository location
 
 Then, I stumbled upon on [this blog](http://koyekola.tumblr.com/post/7193469590/pip-error-installing-from-git-branch-tag-fixed) (link broken) post which explained everything. The solution proposed (edit .gitconfig [color]) solved the issue!
 
-As a reference, in case of the link goes down, I am copy&pasting the clue here:
+As a reference, in case of the link goes down, I am copy & pasting the clue here:
 
 The cause is the .gitconfig’s color setting:
 
