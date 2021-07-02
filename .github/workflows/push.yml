@@ -16,4 +16,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GOOGLE_ANALYTICS: ${{ secrets.GOOGLE_ANALYTICS }}
         UTTERANCES_REPO: ${{ secrets.UTTERANCES_REPO }}
+        CONTEXT: ${{ secrets.CONTEXT }}
         PELICAN_CONFIG_FILE: publishconf.py
