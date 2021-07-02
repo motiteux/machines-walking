@@ -1,7 +1,6 @@
 Title: Contact
 Heading: Internet Magie
 Subheading: 
-Template: contact
 url: contact
 save_as: contact/index.html
 
