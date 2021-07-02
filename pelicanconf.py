@@ -81,8 +81,10 @@ SOCIAL = (
 )
 
 # Elegant theme
-STATIC_PATHS = ["theme/images", "images"]
-EXTRA_PATH_METADATA = {}
+STATIC_PATHS = ["theme/images", "images", "extra/CNAME"]
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'}
+    }
 
 if os.environ.get("CONTEXT") == "production":
     STATIC_PATHS.append("extra/robots.txt")
