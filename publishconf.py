@@ -14,7 +14,7 @@ from pelicanconf import *
 
 # Important: Changing SITEURL may break links in deploy-previews
 if os.environ.get("CONTEXT") == "production":
-    SITEURL = "https://www.machines-walking-in-the-snow.com"
+    SITEURL = "https://machines-walking-in-the-snow.com"
     FEED_DOMAIN = SITEURL
     FEED_ALL_ATOM = "feeds/all.atom.xml"
     CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
