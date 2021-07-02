@@ -20,7 +20,7 @@ if os.environ.get("CONTEXT") == "production":
     CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
     MODERN_GOOGLE_ANALYTICS = os.environ.get("GOOGLE_TAG_MEASUREMENT_ID")
     UTTERANCES_REPO = os.environ.get("UTTERANCES_REPO")
-    UTTERANCES_LABEL = os.environ.get("UTTERANCES_LABEL")
+    UTTERANCES_FILTER = False
 
 elif os.environ.get("CONTEXT") == "staging":
     SITENAME = "Machines walking in the snow (next)"
