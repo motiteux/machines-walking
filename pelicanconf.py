@@ -80,12 +80,8 @@ SOCIAL = (
 STATIC_PATHS = ["theme/images", "images", "extra/_redirects", "code"]
 EXTRA_PATH_METADATA = {"extra/_redirects": {"path": "_redirects"}}
 
-if os.environ.get("CONTEXT") == "production":
-    STATIC_PATHS.append("extra/robots.txt")
-    EXTRA_PATH_METADATA["extra/robots.txt"] = {"path": "robots.txt"}
-else:
-    STATIC_PATHS.append("extra/robots_deny.txt")
-    EXTRA_PATH_METADATA["extra/robots_deny.txt"] = {"path": "robots.txt"}
+STATIC_PATHS.append("extra/robots_deny.txt")
+EXTRA_PATH_METADATA["extra/robots_deny.txt"] = {"path": "robots.txt"}
 
 DIRECT_TEMPLATES = ["index", "tags", "categories", "archives", "search", "404"]
 TAG_SAVE_AS = ""
