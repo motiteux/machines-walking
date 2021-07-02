@@ -3,15 +3,15 @@
 from __future__ import unicode_literals
 import os
 
-AUTHOR = "Elegant Team"
-SITENAME = "Elegant"
-SITESUBTITLE = "The Best Pelican Theme"
-SITEURL = "https://www.machines-walking-in-the-snow.com"
+AUTHOR = "Marc-Olivier Titeux"
+SITENAME = "Machines walking in the snow"
+SITESUBTITLE = "My little corner of convergence"
+SITEURL = ""
 
 PATH = "content"
 
 # Regional Settings
-TIMEZONE = "Asia/Karachi"
+TIMEZONE = "Europe/Zurich"
 DATE_FORMATS = {"en": "%b %d, %Y"}
 
 # Plugins and extensions
@@ -47,6 +47,7 @@ SITEMAP = {
 THEME = "themes/pelican-elegant"
 TYPOGRIFY = True
 DEFAULT_PAGINATION = False
+USE_SHORTCUT_ICONS = True
 
 # Defaults
 DEFAULT_CATEGORY = "Miscellaneous"
@@ -67,7 +68,9 @@ CATEGORY_FEED_RSS = None
 
 # Social
 SOCIAL = (
-    ("Github", "https://github.com/Pelican-Elegant/", "Elegant Github Repository"),
+    ("Github", "https://github.com/motiteux/", "My Github repositories"),
+    ("Twitter", "https://twitter.com/MarcoTiteux"),
+    ("LinkedIn", "https://www.linkedin.com/in/motiteux/"),
     ("RSS", SITEURL + "/feeds/all.atom.xml"),
     (
         "Calendar",
@@ -77,17 +80,20 @@ SOCIAL = (
 )
 
 # Elegant theme
-STATIC_PATHS = ["theme/images", "images", "extra/_redirects", "code"]
-EXTRA_PATH_METADATA = {"extra/_redirects": {"path": "_redirects"}}
+STATIC_PATHS = ["theme/images", "images"]
+EXTRA_PATH_METADATA = {}
 
-STATIC_PATHS.append("extra/robots_deny.txt")
-EXTRA_PATH_METADATA["extra/robots_deny.txt"] = {"path": "robots.txt"}
+if os.environ.get("CONTEXT") == "production":
+    STATIC_PATHS.append("extra/robots.txt")
+    EXTRA_PATH_METADATA["extra/robots.txt"] = {"path": "robots.txt"}
+else:
+    STATIC_PATHS.append("extra/robots_deny.txt")
+    EXTRA_PATH_METADATA["extra/robots_deny.txt"] = {"path": "robots.txt"}
 
 DIRECT_TEMPLATES = ["index", "tags", "categories", "archives", "search", "404"]
 TAG_SAVE_AS = ""
 AUTHOR_SAVE_AS = ""
 CATEGORY_SAVE_AS = ""
-USE_SHORTCUT_ICONS = True
 
 # Elegant Labels
 SOCIAL_PROFILE_LABEL = "Stay in Touch"
@@ -96,26 +102,26 @@ SHARE_POST_INTRO = "Like this post? Share on:"
 COMMENTS_INTRO = "So what do you think? Did I miss something? Is any part unclear? Leave your comments below."
 
 # Email Subscriptions
-EMAIL_SUBSCRIPTION_LABEL = "Get New Release Alert"
+EMAIL_SUBSCRIPTION_LABEL = "Get New Content Notifications"
 EMAIL_FIELD_PLACEHOLDER = "Enter your email..."
 SUBSCRIBE_BUTTON_TITLE = "Notify me"
 
-FREELISTS_NAME = "oracle-l"
-FREELISTS_FILTER = True
+#FREELISTS_NAME = "oracle-l"
+#FREELISTS_FILTER = True
 
 # SMO
-TWITTER_USERNAME = ""
-FEATURED_IMAGE = SITEURL + "/theme/images/apple-touch-icon-152x152.png"
+TWITTER_USERNAME = "MarcoTiteux"
+FEATURED_IMAGE = SITEURL + "/theme/images/apple-touch-icon.png"
 
 # Legal
 SITE_LICENSE = """Content licensed under <a rel="license nofollow noopener noreferrer"
     href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
     Creative Commons Attribution 4.0 International License</a>."""
-HOSTED_ON = {"name": "Netlify", "url": "https://www.netlify.com/"}
+HOSTED_ON = {"name": "Github Pages", "url": "https://www.github.com/"}
 
 # SEO
 SITE_DESCRIPTION = (
-    "Documentation of Elegant, a theme for Pelican, originally created by Talha Mansoor"
+    "I try to design some machines that will struggle in life, and I want to write about it"
 )
 
 # Share links at bottom of articles
@@ -141,16 +147,6 @@ PROJECTS = [
         "description": "See planned features and estimated release dates",
     },
     {
-        "name": "Press Kit",
-        "url": "https://github.com/Pelican-Elegant/elegant/tree/master/elegant-logo",
-        "description": "Writing an article on Elegant? Get Elegant logo from here",
-    },
-    {
-        "name": "onCrashReboot",
-        "url": "https://www.oncrashreboot.com/",
-        "description": "Home page of Elegant creator and lead developer",
-    },
-    {
         "name": "Pelican",
         "url": "https://github.com/getpelican/pelican/",
         "description": "Static site generator that powers Elegant",
@@ -162,28 +158,15 @@ PROJECTS = [
     },
 ]
 
-LANDING_PAGE_TITLE = "Elegant – Why it is the Best Pelican Theme"
+LANDING_PAGE_TITLE = "My little corner of convergence"
 
 AUTHORS = {
-    "Talha Mansoor": {
-        "url": "https://www.oncrashreboot.com/",
-        "blurb": "is the creator and lead developer of Elegant theme.",
-        "avatar": "/images/avatars/talha131.png",
-    },
-    "Pablo Iranzo Gómez": {
-        "url": "http://iranzo.github.io",
-        "blurb": " opensource enthusiast and Lego fan doing some python simple programs like @redken_bot in telegram, etc",
-        "avatar": "https://avatars.githubusercontent.com/u/312463",
-    },
-    "Jack De Winter": {
-        "url": "http://jackdewinter.github.io",
-        "blurb": "ever evolving, ever learning",
-    },
-    "Matija Šuklje": {
-        "url": "https://matija.suklje.name",
-        "blurb": "FOSS lawyer by trade, hacker by heart.",
+    "Marc-Olivier Titeux": {
+        "url": "https://www.machines-walking-in-the-snow.com/",
+        "blurb": "",
+        "avatar": "/images/motiteux.png",
     },
 }
-DISQUS_FILTER = True
-UTTERANCES_FILTER = True
-COMMENTBOX_FILTER = True
+#DISQUS_FILTER = True
+#UTTERANCES_FILTER = True
+#COMMENTBOX_FILTER = True
