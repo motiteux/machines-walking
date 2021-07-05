@@ -31,6 +31,12 @@ elif os.environ.get("CONTEXT") == "staging":
 else:
    SITENAME = ""
    SITEURL = ""
+    
+PROJECTS[1] = {
+    "name": "About me",
+    "url": SITEURL + "about-me",
+    "description": "Some fancy details about myself",
+}
 
 
 # MAILCHIMP_FORM_ACTION = os.environ.get("MAILCHIMP_FORM_ACTION")
