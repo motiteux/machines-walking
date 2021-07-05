@@ -135,29 +135,14 @@ SHARE_LINKS = [("twitter", "Twitter"), ("facebook", "Facebook"), ("email", "Emai
 PROJECTS_TITLE = "Related Projects"
 PROJECTS = [
     {
-        "name": "Elegant",
-        "url": "https://github.com/Pelican-Elegant/elegant",
-        "description": "Source code of Elegant theme",
+        "name": "About me",
+        "url": SITEURL + "about-me",
+        "description": "Some fancy details about myself",
     },
     {
-        "name": "Issue Tracker",
-        "url": "https://github.com/Pelican-Elegant/elegant/issues",
-        "description": "Give your feedback, ask questions or report issues",
-    },
-    {
-        "name": "Roadmap",
-        "url": "https://github.com/Pelican-Elegant/elegant/milestones",
-        "description": "See planned features and estimated release dates",
-    },
-    {
-        "name": "Pelican",
-        "url": "https://github.com/getpelican/pelican/",
-        "description": "Static site generator that powers Elegant",
-    },
-    {
-        "name": "Pelican Plugins",
-        "url": "https://github.com/getpelican/pelican-plugins",
-        "description": "Collection of plugins for the Pelican static site generator",
+        "name": "This blog in Github",
+        "url": "https://github.com/motiteux/machines-walking",
+        "description": "Source code of Machines walking in the snow",
     },
 ]
 
