@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"[python]": {
+
+			"editor.wordBasedSuggestions": false
+			
+		},
+		"python.pythonPath": "D:\Develop\Projects\Personal\machines-walking\.venv\Scripts\python.exe"
+		
+
+	}
+}

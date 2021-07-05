@@ -27,8 +27,14 @@ elif os.environ.get("CONTEXT") == "staging":
     FEED_DOMAIN = SITEURL
     MODERN_GOOGLE_ANALYTICS = ""
 
+elif os.environ.get("CONTEXT") == "local":
+    SITENAME = "Local - Machines walking in the snow"
+    SITEURL = ""
+    FEED_DOMAIN = SITEURL
+    MODERN_GOOGLE_ANALYTICS = ""
 else:
-   SITEURL = ""
+    SITENAME = ""
+    SITEURL = ""
     
 PROJECTS[0] = {
     "name": "About me",
