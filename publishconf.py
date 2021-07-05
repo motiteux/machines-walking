@@ -34,7 +34,7 @@ else:
     
 PROJECTS[1] = {
     "name": "About me",
-    "url": SITEURL + "about-me",
+    "url": SITEURL + "/about-me",
     "description": "Some fancy details about myself",
 }
 
