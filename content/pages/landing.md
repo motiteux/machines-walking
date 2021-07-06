@@ -1,6 +1,6 @@
 ---
 title: Landing
-autho: Marc-O
+author: Marc-O
 layout: page
 date: 2021-07-02 9:50:012 +0100
 status: hidden

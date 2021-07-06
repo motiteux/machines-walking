@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from datetime import date
+
 import os
 
 AUTHOR = "Marc-Olivier Titeux"
@@ -9,6 +11,10 @@ SITESUBTITLE = "My little corner of convergence"
 SITEURL = ""
 
 PATH = "content"
+ARTICLE_PATHS = ['articles']
+PAGE_PATHS = ['pages']
+
+DISPLAY_PAGES_ON_MENU = True
 
 # Regional Settings
 TIMEZONE = "Europe/Zurich"
@@ -37,6 +43,8 @@ PLUGINS = [
     "series",
     "share_post",
     "tipue_search",
+    'better_figures_and_images',
+    'post_stats',
 ]
 SITEMAP = {
     "format": "xml",
@@ -51,9 +59,10 @@ DEFAULT_PAGINATION = False
 USE_SHORTCUT_ICONS = True
 
 # Defaults
-DEFAULT_CATEGORY = "Miscellaneous"
+DEFAULT_CATEGORY = "miscellaneous"
 USE_FOLDER_AS_CATEGORY = False
-ARTICLE_URL = "{slug}"
+ARTICLE_URL = "{date:%Y}/{date:%m}/{date:%d}/{slug}/'"
+ARTICLE_SAVE_AS = "{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html"
 PAGE_URL = "{slug}"
 PAGE_SAVE_AS = "{slug}.html"
 TAGS_URL = "tags"
@@ -98,6 +107,27 @@ TAG_SAVE_AS = ""
 AUTHOR_SAVE_AS = ""
 CATEGORY_SAVE_AS = ""
 
+# What do we want archive URLs to look like?
+YEAR_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/index.html'
+MONTH_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/index.html'
+DAY_ARCHIVE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/index.html'
+
+# Do something if people visit /blog
+ARCHIVES_SAVE_AS = 'blog/index.html'
+
+
+SUMMARY_MAX_LENGTH = 80
+
+#################################
+#
+# Cache Settings
+#
+#################################
+CACHE_CONTENT = True
+CHECK_MODIFIED_METHOD = 'mtime'
+LOAD_CONTENT_CACHE = True
+GZIP_CACHE = False
+
 # Elegant Labels
 SOCIAL_PROFILE_LABEL = "Stay in Touch"
 RELATED_POSTS_LABEL = "Keep Reading"
@@ -117,10 +147,21 @@ TWITTER_USERNAME = "MarcoTiteux"
 FEATURED_IMAGE = SITEURL + "/theme/images/apple-touch-icon.png"
 
 # Legal
-SITE_LICENSE = """Content licensed under <a rel="license nofollow noopener noreferrer"
-    href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
-    Creative Commons Attribution 4.0 International License</a>."""
-HOSTED_ON = {"name": "Github Pages", "url": "https://www.github.com/"}
+SITE_LICENSE = """<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+    <a property="dct:title" rel="cc:attributionURL"
+    href="https://machines-walking-in-the-snow.com/">Machines walking in the snow</a>
+    by <a rel="cc:attributionURL dct:creator" property="cc:attributionName"
+    href="https://machines-walking-in-the-snow.com/about-me">Marc-Olivier Titeux</a> is licensed
+    under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank"
+    rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0
+    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
+    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
+    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"></a></p>"""
+
+#HOSTED_ON = {"name": "Github Pages", "url": "https://www.github.com/"}
 
 # SEO
 SITE_DESCRIPTION = (
@@ -158,3 +199,7 @@ AUTHORS = {
 #DISQUS_FILTER = True
 #UTTERANCES_FILTER = True
 #COMMENTBOX_FILTER = True
+
+
+# Settings for the related_posts plugin
+RELATED_POSTS_MAX = 4

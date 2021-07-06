@@ -23,16 +23,14 @@ if os.environ.get("CONTEXT") == "production":
     UTTERANCES_FILTER = False
 
 elif os.environ.get("CONTEXT") == "staging":
-    SITENAME = "Machines walking in the snow (next)"
     SITEURL = "http://next.www.machines-walking-in-the-snow.com"
     FEED_DOMAIN = SITEURL
     MODERN_GOOGLE_ANALYTICS = ""
 
 else:
-   SITENAME = ""
    SITEURL = ""
     
-PROJECTS[1] = {
+PROJECTS[0] = {
     "name": "About me",
     "url": SITEURL + "/about-me",
     "description": "Some fancy details about myself",
@@ -48,3 +46,5 @@ PLUGINS.append("filetime_from_git")
 PLUGINS.append("sitemap")
 
 DELETE_OUTPUT_DIRECTORY = True
+
+
