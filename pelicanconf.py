@@ -7,7 +7,6 @@ import os
 
 AUTHOR = "Marc-Olivier Titeux"
 SITENAME = "Machines walking in the snow"
-SITESUBTITLE = "My little corner of convergence"
 SITEURL = ""
 
 PATH = "content"
@@ -61,7 +60,7 @@ USE_SHORTCUT_ICONS = True
 # Defaults
 DEFAULT_CATEGORY = "miscellaneous"
 USE_FOLDER_AS_CATEGORY = False
-ARTICLE_URL = "{date:%Y}/{date:%m}/{date:%d}/{slug}/'"
+ARTICLE_URL = "{date:%Y}/{date:%m}/{date:%d}/{slug}/"
 ARTICLE_SAVE_AS = "{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html"
 PAGE_URL = "{slug}"
 PAGE_SAVE_AS = "{slug}.html"
@@ -75,19 +74,6 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 CATEGORY_FEED_ATOM = None
 CATEGORY_FEED_RSS = None
-
-# Social
-SOCIAL = (
-    ("Github", "https://github.com/motiteux/", "My Github repositories"),
-    ("Twitter", "https://twitter.com/MarcoTiteux"),
-    ("LinkedIn", "https://www.linkedin.com/in/motiteux/"),
-    ("RSS", SITEURL + "/feeds/all.atom.xml"),
-    (
-        "Calendar",
-        "https://github.com/Pelican-Elegant/elegant/milestones",
-        "Elegant Project Roadmap",
-    ),
-)
 
 # Elegant theme
 STATIC_PATHS = ["theme/images", "images", "extra/CNAME"]
@@ -133,6 +119,19 @@ SOCIAL_PROFILE_LABEL = "Stay in Touch"
 RELATED_POSTS_LABEL = "Keep Reading"
 SHARE_POST_INTRO = "Like this post? Share on:"
 COMMENTS_INTRO = "So what do you think? Did I miss something? Is any part unclear? Leave your comments below."
+
+# Social
+SOCIAL = (
+    ("Github", "https://github.com/motiteux/", "My Github repositories"),
+    ("Twitter", "https://twitter.com/MarcoTiteux"),
+    ("LinkedIn", "https://www.linkedin.com/in/motiteux/"),
+    ("RSS", SITEURL + "/feeds/all.atom.xml"),
+    (
+        "Calendar",
+        "https://github.com/Pelican-Elegant/elegant/milestones",
+        "Elegant Project Roadmap",
+    ),
+)
 
 # Email Subscriptions
 EMAIL_SUBSCRIPTION_LABEL = "Get New Content Notifications"
@@ -181,7 +180,7 @@ PROJECTS = [
         "description": "Some fancy details about myself",
     },
     {
-        "name": "This blog in Github",
+        "name": "View the project on Github",
         "url": "https://github.com/motiteux/machines-walking",
         "description": "Source code of Machines walking in the snow",
     },

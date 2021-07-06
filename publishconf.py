@@ -35,6 +35,7 @@ elif os.environ.get("CONTEXT") == "local":
 else:
     SITENAME = ""
     SITEURL = ""
+
     
 PROJECTS[0] = {
     "name": "About me",
