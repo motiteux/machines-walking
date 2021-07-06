@@ -1,10 +1,9 @@
 ---
-<<<<<<< HEAD
-author: Marc-O
-title: Who Am I
+title: About Me
+autho: Marc-O
 layout: page
-date: 2021-07-6 9:30:47 +0100
-status: draft
+date: 2021-07-05 21:20:012 +0100
+status: hidden
 slug: about-me
 utterances_filter: on
 ---
@@ -15,3 +14,5 @@ If you have reached this page, either you landed here on purpose, or you are on 
 
 In any case, welcome!
 
+
+whoami

@@ -1,9 +1,13 @@
-Title: Correct pip error when installing or freezing with git repos
-Slug: correct-pip-error-installing-freezing-with-git-repos
-Date: 2021-04-09
-Author: Marc-Olivier Titeux
-Email: marcolivier.titeux@gmail.com
-Summary: Do not let colors in your way of the pip
+---
+title: Correct pip error when installing or freezing with git repos
+slug: correct-pip-error-installing-freezing-with-git-repos
+date: 2014-04-09
+Author: Marc-O
+email: marcolivier.titeux@gmail.com
+summary: Do not let colors in your way of the pip
+Category: languages
+Tags: python, scistack, numpy
+---
 
 I kept having the following issue when using pip freeze with a git repos:
 
